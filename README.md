@@ -25,3 +25,4 @@ Com ele, você pode:
 [![Email](https://img.shields.io/badge/Email-000?style=for-the-badge&logo=gmail&logoColor=red)](mailto:devfelipevitorino@gmail.com)  
 
 🚀 *Obrigado por conferir o projeto!*
+
