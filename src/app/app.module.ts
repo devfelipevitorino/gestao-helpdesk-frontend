@@ -28,6 +28,7 @@ import { HomeComponent } from './componets/home/home.component';
 import { HeaderComponent } from './componets/header/header.component';
 import { TecnicoListComponent } from './componets/tecnico/tecnico-list/tecnico-list.component';
 import { LoginComponent } from './componets/login/login.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,11 @@ import { LoginComponent } from './componets/login/login.component';
     MatIconModule,
     MatListModule,
     MatCardModule,
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      closeButton: true,
+      progressBar: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
