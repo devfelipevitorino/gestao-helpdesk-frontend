@@ -1,0 +1,53 @@
+.container{
+    height: 100%;
+    background: #EEAD2D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+::ng-deep mat-form-field {
+    color: black !important;
+  }
+  
+  ::ng-deep .mat-form-field-label {
+    color: black !important;
+  }
+  
+  ::ng-deep .mat-form-field-underline {
+    background-color: black !important;
+  }
+  ::ng-deep .mat-form-field input::placeholder {
+    color: black !important;
+    opacity: 1; 
+  }
+  
+
+.form {
+    width: 30rem;
+    margin: auto;
+    background-color: #EFEFF6;
+    padding: 4rem 1rem;
+    border-radius: 1rem;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    height: 15rem;
+    width: 100%;
+    margin: auto;
+    margin: 1.5rem auto 1.5rem auto;
+}
+
+button{
+    margin-top: 1.5rem;
+}
+
+.full-width{
+    width: 100%;
+}
+
