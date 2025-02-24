@@ -11,13 +11,13 @@
 
         <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Nome</mat-label>
-            <input [formControl]="nome" required matInput>
+            <input [formControl]="nome" required required maxlength="50" matInput>
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>CPF</mat-label>
-            <input [formControl]="cpf" required matInput>
+            <input [formControl]="cpf" required maxlength="11" matInput>
             <mat-icon matSuffix>pin</mat-icon>
         </mat-form-field>
 
