@@ -11,29 +11,29 @@
 
         <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Nome</mat-label>
-            <input matInput>
+            <input [formControl]="nome" required matInput>
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>CPF</mat-label>
-            <input matInput>
+            <input [formControl]="cpf" required matInput>
             <mat-icon matSuffix>pin</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Email</mat-label>
-            <input matInput>
+            <input [formControl]="email" required  matInput>
             <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Senha</mat-label>
-            <input type="password" matInput>
+            <input [formControl]="senha" required  type="password" matInput>
             <mat-icon matSuffix>password</mat-icon>
         </mat-form-field>
 
         <button class="fullWidth mat-elevation-z4" mat-flat-button color="accent">Cadastrar</button>
-        <button class="fullWidth mat-elevation-z4" mat-flat-button color="warn">Cancelar</button>
+        <button routerLink="../" class="fullWidth mat-elevation-z4" mat-flat-button color="warn">Cancelar</button>
     </form>
 </div>

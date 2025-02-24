@@ -28,3 +28,7 @@ button{
     margin-top: 1.5rem;
     opacity: 70%;
 }
+
+mat-icon{
+    opacity: 0.8;
+}
