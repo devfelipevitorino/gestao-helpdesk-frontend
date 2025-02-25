@@ -21,3 +21,11 @@ h1{
     text-align: center;
     margin-bottom: 2rem;
 }
+
+.edit {
+    color: #EEAD2D;
+}
+
+.delete {
+    color: #ee2d2d;
+}
