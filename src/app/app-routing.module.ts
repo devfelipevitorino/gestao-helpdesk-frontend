@@ -6,6 +6,7 @@ import { TecnicoListComponent } from './componets/tecnico/tecnico-list/tecnico-l
 import { LoginComponent } from './componets/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { TenicoCreateComponent } from './componets/tecnico/tenico-create/tenico-create.component';
+import { TecnicoUpadateComponent } from './componets/tecnico/tecnico-upadate/tecnico-upadate.component';
 
 const routes: Routes = [
   {path: "login", component: LoginComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
       { path: "home", component: HomeComponent },
 
       { path: "tecnicos", component: TecnicoListComponent },
-      { path: "tecnicos/create", component: TenicoCreateComponent }
+      { path: "tecnicos/create", component: TenicoCreateComponent },
+      { path: "tecnicos/update/:id", component: TecnicoUpadateComponent }
     ]
   }
 ];
