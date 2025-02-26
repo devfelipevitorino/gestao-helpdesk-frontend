@@ -46,8 +46,8 @@ export class TecnicoUpadateComponent implements OnInit {
     }
 
     update(): void{
-      this.service.create(this.tecnico).subscribe(() =>{
-        this.toast.success('Técnico cadastrado com sucesso', 'Cadastro');
+      this.service.update(this.tecnico).subscribe(() =>{
+        this.toast.success('Técnico atualizado com sucesso', 'Atualização');
         this.router.navigate(['tecnicos']);
       }, ex => {
         if(ex.error.errors){
