@@ -32,6 +32,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { TenicoCreateComponent } from './componets/tecnico/tenico-create/tenico-create.component';
 import { TecnicoUpadateComponent } from './componets/tecnico/tecnico-upadate/tecnico-upadate.component';
+import { TecnicoDeleteComponent } from './componets/tecnico/tecnico-delete/tecnico-delete.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { TecnicoUpadateComponent } from './componets/tecnico/tecnico-upadate/tec
     TecnicoListComponent,
     LoginComponent,
     TenicoCreateComponent,
-    TecnicoUpadateComponent
+    TecnicoUpadateComponent,
+    TecnicoDeleteComponent
   ],
   imports: [
     BrowserModule,
