@@ -1,34 +1,71 @@
-.container{
-    width: 35rem;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Espaçamento entre a imagem e o card */
+    width: 90%;
     margin: auto;
-    padding: 1rem 2rem 3rem 1rem;
-    border-radius: .6rem;
-}
-
-.fullWidth{
+    padding: 2rem;
+    flex-direction: row; /* Coloca a imagem e o card lado a lado */
+  }
+  
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  img {
+    width: 70%; /* Garante que a imagem ocupe toda a largura do container */
+    height: 70%; /* Garante que a imagem ocupe toda a altura do container */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+  }
+  
+  .card-container {
+    flex: 1;
     width: 100%;
-}
-
-h1{
+    padding: 2rem;
+    border-radius: .6rem;
+    background-color: #fff; /* Fundo branco para o card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacamento entre os elementos */
+    height: 100%; /* Para garantir que o card ocupe o mesmo espaço da imagem */
+  }
+  
+  h1 {
     text-align: center;
-}
-
-img{
-    height: 12rem;
-    margin: auto;
-}
-
-.section{
+    margin-bottom: 1rem;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  button {
+    margin-top: 1.5rem;
+    opacity: 80%;
+  }
+  
+  mat-icon {
+    opacity: 0.8;
+  }
+  
+  .section {
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
-}
-
-button{
-    margin-top: 1.5rem;
-    opacity: 70%;
-}
-
-mat-icon{
-    opacity: 0.8;
-}
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between; /* Espaço entre os botões */
+    gap: 1rem; /* Adiciona espaço entre os botões */
+  }
+  
+  button {
+    flex: 1; /* Garante que os botões se estendam igualmente */
+    margin-top: 1rem;
+  }
+  
