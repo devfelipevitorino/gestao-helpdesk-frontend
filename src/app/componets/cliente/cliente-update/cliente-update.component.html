@@ -5,35 +5,35 @@
   
     <div class="card-container mat-elevation-z8">
       <form class="form">
-        <h1 class="fullWidth">Atualizar Técnico</h1>
+        <h1 class="fullWidth">Atualizar Cliente</h1>
   
         <section class="section">
-          <mat-checkbox (click)="addPerfil(0)" class="margin">Admin</mat-checkbox>
+          <mat-checkbox [disabled]="true" class="margin">Admin</mat-checkbox>
           <mat-checkbox (click)="addPerfil(1)" [checked]="true" class="margin">Cliente</mat-checkbox>
-          <mat-checkbox (click)="addPerfil(2)" class="margin">Técnico</mat-checkbox>
+          <mat-checkbox [disabled]="true" class="margin">Técnico</mat-checkbox>
         </section>
   
         <mat-form-field class="fullWidth" appearance="fill">
           <mat-label>Nome</mat-label>
-          <input [(ngModel)]="tecnico.nome" name="nome" required maxlength="50" matInput>
+          <input [(ngModel)]="cliente.nome" name="nome" required maxlength="50" matInput>
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         </mat-form-field>
   
         <mat-form-field class="fullWidth" appearance="fill">
           <mat-label>CPF</mat-label>
-          <input [(ngModel)]="tecnico.cpf" name="cpf" [formControl]="cpf" required maxlength="11" matInput>
+          <input [(ngModel)]="cliente.cpf" name="cpf" [formControl]="cpf" required maxlength="11" matInput>
           <mat-icon matSuffix>pin</mat-icon>
         </mat-form-field>
   
         <mat-form-field class="fullWidth" appearance="fill">
           <mat-label>Email</mat-label>
-          <input [(ngModel)]="tecnico.email" name="email" [formControl]="email" required matInput>
+          <input [(ngModel)]="cliente.email" name="email" [formControl]="email" required matInput>
           <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
   
         <mat-form-field class="fullWidth" appearance="fill">
           <mat-label>Senha</mat-label>
-          <input [(ngModel)]="tecnico.senha" name="senha" [formControl]="senha" required type="password" matInput>
+          <input [(ngModel)]="cliente.senha" name="senha" [formControl]="senha" required type="password" matInput>
           <mat-icon matSuffix>password</mat-icon>
         </mat-form-field>
   

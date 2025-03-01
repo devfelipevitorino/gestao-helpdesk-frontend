@@ -2,16 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, MinLengthValidator, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Tecnico } from 'src/app/models/tecnico';
-import { TecnicoService } from 'src/app/services/tecnico.service';
+import { Cliente } from 'src/app/models/cliente';
+import { ClienteService } from 'src/app/services/cliente.service';
 
 @Component({
-  selector: 'app-tecnico-upadte',
-  templateUrl: './tecnico-upadate.component.html',
-  styleUrls: ['./tecnico-upadate.component.css']
+  selector: 'app-cliente-update',
+  templateUrl: './cliente-update.component.html',
+  styleUrls: ['./cliente-update.component.css']
 })
-export class TecnicoUpadateComponent implements OnInit {
-  tecnico: Tecnico = {
+export class ClienteUpdateComponent implements OnInit {
+  cliente: Cliente = {
       id: '',
       nome: '',
       cpf: '',
@@ -27,28 +27,28 @@ export class TecnicoUpadateComponent implements OnInit {
     senha: FormControl = new FormControl(null, [Validators.minLength(6), Validators.required]);
     
     constructor(
-      private service: TecnicoService,
+      private service: ClienteService,
       private toast: ToastrService,
       private router: Router,
       private route : ActivatedRoute
     ) { }
   
     ngOnInit(): void {
-      this.tecnico.id = this.route.snapshot.paramMap.get('id');
+      this.cliente.id = this.route.snapshot.paramMap.get('id');
       this.findById();
      }
   
     findById(): void{
-      this.service.findById(this.tecnico.id).subscribe(resposta => {
+      this.service.findById(this.cliente.id).subscribe(resposta => {
         resposta.perfis = [];
-        this.tecnico = resposta;
+        this.cliente = resposta;
       });
     }
 
     update(): void{
-      this.service.update(this.tecnico).subscribe(() =>{
-        this.toast.success('Técnico atualizado com sucesso', 'Atualização');
-        this.router.navigate(['tecnicos']);
+      this.service.update(this.cliente).subscribe(() =>{
+        this.toast.success('Cliente atualizado com sucesso', 'Atualização');
+        this.router.navigate(['clientes']);
       }, ex => {
         if(ex.error.errors){
           ex.error.errors.forEach(element => {
@@ -61,10 +61,10 @@ export class TecnicoUpadateComponent implements OnInit {
     }
   
     addPerfil(perfil: any): void{
-      if(this.tecnico.perfis.includes(perfil)){
-        this.tecnico.perfis.splice(this.tecnico.perfis.indexOf(perfil), 1);
+      if(this.cliente.perfis.includes(perfil)){
+        this.cliente.perfis.splice(this.cliente.perfis.indexOf(perfil), 1);
       }else{
-        this.tecnico.perfis.push(perfil);
+        this.cliente.perfis.push(perfil);
       }
     }
   
