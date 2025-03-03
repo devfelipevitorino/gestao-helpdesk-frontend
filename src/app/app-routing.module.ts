@@ -12,6 +12,7 @@ import { ClienteListComponent } from './componets/cliente/cliente-list/cliente-l
 import { ClienteCreateComponent } from './componets/cliente/cliente-create/cliente-create.component';
 import { ClienteUpdateComponent } from './componets/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './componets/cliente/cliente-delete/cliente-delete.component';
+import { ChamadoListComponent } from './componets/chamado/chamado-list/chamado-list.component';
 
 const routes: Routes = [
   {path: "login", component: LoginComponent },
@@ -27,7 +28,9 @@ const routes: Routes = [
       { path: "clientes", component: ClienteListComponent },
       { path: "clientes/create", component: ClienteCreateComponent },
       { path: "clientes/update/:id", component: ClienteUpdateComponent },
-      { path: "clientes/delete/:id", component: ClienteDeleteComponent }
+      { path: "clientes/delete/:id", component: ClienteDeleteComponent },
+
+      { path: "chamados", component: ChamadoListComponent },
     ]
   }
 ];
