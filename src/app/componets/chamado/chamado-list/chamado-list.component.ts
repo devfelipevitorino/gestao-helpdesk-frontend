@@ -22,6 +22,7 @@ export class ChamadoListComponent implements OnInit {
   constructor(private service: ChamadoService) { }
 
   ngOnInit(): void {
+    this.findAll();
   }
 
   findAll(): void {
