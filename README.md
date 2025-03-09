@@ -1,7 +1,6 @@
 # 🎟️ Sistema de Gestão de Help Desk  
 
 ![Badge em Desenvolvimento](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)
-![Java](https://img.shields.io/badge/Java-11-blue)
 ![Angular](https://img.shields.io/badge/Angular-%23DD0031-red)
 
 ## 🚀 Sobre o Projeto  
